@@ -2,17 +2,21 @@ Student Performance Analysis and Prediction System
 
 Project Overview
 
-The Student Performance Analysis and Prediction System is a Python-based Machine Learning project designed to analyze students' academic performance and predict their examination scores using Linear Regression.
+This project uses Python and Machine Learning to analyze student academic performance and predict examination scores based on selected academic factors.
 
-The project explores how study hours, attendance, and previous examination scores relate to students' final performance.
+The system uses Linear Regression to predict exam scores using:
+
+- Hours Studied
+- Attendance
+- Previous Scores
 
 Objectives
 
-- Analyze students' academic performance.
-- Identify relationships between academic factors and examination scores.
-- Visualize important performance trends.
-- Build a Machine Learning model to predict examination scores.
-- Evaluate the model using standard regression metrics.
+- Analyze student performance data.
+- Perform data cleaning and preprocessing.
+- Visualize academic trends and relationships.
+- Build a Linear Regression prediction model.
+- Evaluate model performance using standard regression metrics.
 
 Technologies Used
 
@@ -29,54 +33,49 @@ Dataset
 
 Dataset: Student Performance Factors
 
-The dataset contains academic and other factors associated with student performance.
+Source: https://www.kaggle.com/datasets/lainguyn123/student-performance-factors
 
-Important features used:
+Machine Learning Model
 
-- Hours Studied
-- Attendance
-- Previous Scores
-- Exam Score (Target Variable)
+Algorithm: Linear Regression
 
-Dataset Source: https://www.kaggle.com/datasets/lainguyn123/student-performance-factors
+Input Features: Hours Studied, Attendance, Previous Scores
 
-Project Workflow
+Target Variable: Exam Score
 
-1. Data Collection
-2. Data Loading and Inspection
-3. Data Cleaning and Preprocessing
-4. Exploratory Data Analysis (EDA)
-5. Data Visualization
-6. Train-Test Split
-7. Linear Regression Model Development
-8. Model Evaluation
-9. Cross-Validation
-10. Feature Coefficient Analysis
+Model Evaluation Results
 
-Machine Learning Algorithm
+Metric| Result
+MAE| 1.359207
+RMSE| 2.310471
+R² Score| 0.622338
+Average Cross-Validation R²| 0.572816
 
-Linear Regression
+Feature Coefficients
 
-The model uses the following input features:
+Feature| Coefficient
+Hours Studied| 0.287498
+Attendance| 0.199134
+Previous Scores| 0.047464
 
-- Hours Studied
-- Attendance
-- Previous Scores
+Project Visualizations
 
-It predicts the student's examination score.
+The project includes:
 
-Evaluation Metrics
+- Study Hours Analysis
+- Attendance vs Exam Score
+- Score Distribution
+- Correlation Heatmap
+- Actual vs Predicted Exam Scores
+- Feature Coefficient Analysis
 
-- Mean Absolute Error (MAE)
-- Root Mean Squared Error (RMSE)
-- R² Score
-- 5-Fold Cross-Validation
-
-Repository Structure
+Project Structure
 
 Student-Performance-Analysis/
 │
 ├── data/
+│   └── StudentPerformanceFactors.csv
+│
 ├── notebooks/
 │   └── student_performance_analysis.ipynb
 │
@@ -85,28 +84,17 @@ Student-Performance-Analysis/
 │   └── evaluation_results/
 │
 ├── screenshots/
-├── README.md
+│
+├── Project_Report.pdf
 ├── requirements.txt
-└── .gitignore
-
-Results
-
-The model's performance is evaluated using MAE, RMSE, R² Score, and cross-validation. Detailed results and visualizations are available in the "outputs/" folder.
-
-How to Run the Project
-
-1. Clone this repository.
-2. Install the required libraries:
-   "pip install -r requirements.txt"
-3. Open the Jupyter Notebook in Google Colab or Jupyter Notebook.
-4. Load the dataset from the "data/" folder.
-5. Run the notebook cells sequentially.
+└── README.md
 
 Conclusion
 
-This project demonstrates how Python and Machine Learning can be used to analyze academic performance, identify relevant patterns, and predict examination scores.
+The project demonstrates how data analysis and machine learning can be used to study academic performance and estimate examination scores. The Linear Regression model achieved an R² score of 0.622338 on the test dataset.
 
----
+Author
 
-Project: Minor Project – Student Performance Analysis and Prediction System
-Course: BCA (Artificial Intelligence and Machine Learning)
+Sameer
+Course: Artificial Intelligence and Machine Learning
+Roll Number: AIML-A6/SEP-11823
